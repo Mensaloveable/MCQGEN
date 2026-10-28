@@ -1,0 +1,11 @@
+openai
+langchain
+langchain-core
+langchain-google-genai
+streamlit
+python-dotenv
+pypdf
+pandas
+
+
+-e .
