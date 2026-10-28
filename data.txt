@@ -1,0 +1,36 @@
+1. Explain the main idea behind Java and the concept of Write Once, Run Anywhere.
+Java is a high-level, object-oriented programming language designed to be platform-independent. Its core philosophy is encapsulated in the concept of "Write Once, Run Anywhere" (WORA), which revolutionized software development by enabling cross-platform compatibility.
+
+Write Once, Run Anywhere (WORA)
+WORA is a principle that allows Java code to be written once and run on any device or operating system without modification. This is achieved through several key components:
+
+1. Java Virtual Machine (JVM)
+The JVM acts as an abstraction layer between Java code and the underlying hardware or operating system. It interprets and executes Java bytecode, ensuring consistent behavior across different platforms.
+
+2. Bytecode
+Java source code is compiled into platform-independent bytecode, which can be executed by any JVM, regardless of the underlying system architecture.
+
+3. Standard Library
+Java provides a comprehensive standard library that offers cross-platform capabilities for common tasks like file handling and networking.
+
+How Java Achieves WORA
+Platform Independence: Java bytecode can run on any device with a compatible JVM, from smartphones to supercomputers.
+
+JVM Customization: Each operating system has a tailored JVM version, ensuring WORA functionality across diverse environments.
+
+Garbage Collection: Automatic memory management reduces the risk of memory leaks and simplifies development across platforms.
+
+Security: Java's design excludes direct memory manipulation through pointers, enhancing security across different systems.
+
+Code Example: "Hello, World!" in Java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+This simple program demonstrates Java's WORA principle. It can be compiled and run on any system with a JVM, producing the same output:
+
+Compile: javac HelloWorld.java
+Run: java HelloWorld
+Output: Hello, World!
+The same bytecode can be executed on Windows, Linux, macOS, or any other platform with a compatible JVM, showcasing the practical implementation of "Write Once, Run Anywhere" in Java.
