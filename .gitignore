@@ -4,3 +4,4 @@ env_backup/
 __pycache__/
 *.pyc
 .env
+logs
