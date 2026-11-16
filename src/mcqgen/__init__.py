@@ -66,7 +66,7 @@ Tinubu actively contributed and raised funds for community development programs 
     # result2 = chain2.run(information=information)
 
     response1 = chain1.invoke({"information": information})
-    # response2 = chain2.invoke({"information": information})
+    response2 = chain2.invoke({"information": information})
 
     # print the results
     print("Result from OpenAI GPT-4:")
@@ -77,7 +77,7 @@ Tinubu actively contributed and raised funds for community development programs 
     print("\nResult from Google Gemini Pro:")
     # print(result2.content)
     print("\nResponse from Google Gemini Pro:")
-    # print(response2.content)
+    print(response2.content)
 
 
 if __name__ == "__main__":
