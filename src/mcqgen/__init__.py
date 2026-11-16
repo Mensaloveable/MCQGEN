@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_ollama import ChatOllama
 
 load_dotenv()
 
@@ -43,10 +44,10 @@ Tinubu actively contributed and raised funds for community development programs 
     )
 
     # OpenAI
-    llm1 = ChatOpenAI(
-        model="gpt-4o-mini",
+    llm1 = ChatOllama(
+        model="gemma-assistant",
         temperature=0.7,
-        api_key=os.getenv("OPENAI_API_KEY"),
+        # api_key=os.getenv("OPENAI_API_KEY"),
     )
 
     # Gemini
@@ -58,25 +59,25 @@ Tinubu actively contributed and raised funds for community development programs 
         api_key=os.getenv("GOOGLE_API_KEY"),
     )
 
-    # chain1 = summary_prompt_template | llm1
+    chain1 = summary_prompt_template | llm1
     chain2 = summary_prompt_template | llm
 
     # result1 = chain1.run(information=information)
     # result2 = chain2.run(information=information)
 
-    # response1 = chain1.invoke({"information": information})
-    response2 = chain2.invoke({"information": information})
+    response1 = chain1.invoke({"information": information})
+    # response2 = chain2.invoke({"information": information})
 
     # print the results
     print("Result from OpenAI GPT-4:")
     # print(result1.content)
     print("\nResponse from OpenAI GPT-4:")
-    # print(response1.content)
+    print(response1.content)
 
     print("\nResult from Google Gemini Pro:")
     # print(result2.content)
     print("\nResponse from Google Gemini Pro:")
-    print(response2.content)
+    # print(response2.content)
 
 
 if __name__ == "__main__":
