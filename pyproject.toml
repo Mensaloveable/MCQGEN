@@ -11,6 +11,7 @@ dependencies = [
     "black>=26.10.1",
     "isort>=9.0.2",
     "langchain>=1.5.0",
+    "langchain-core>=1.8.0",
     "langchain-google-genai>=4.5.0",
     "langchain-openai>=1.8.0",
     "ollama>=0.6.3",
